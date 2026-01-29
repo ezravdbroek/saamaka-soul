@@ -34,10 +34,6 @@
 		align-items: center;
 	}
 
-	.hero-left {
-		/* text content */
-	}
-
 	.hero-right {
 		justify-self: end;
 	}
@@ -81,11 +77,12 @@
 
 	@media (max-width: 768px) {
 		.hero {
-			padding: 2rem;
+			padding: 2rem 1.5rem;
 		}
 
 		.hero-container {
 			grid-template-columns: 1fr;
+			gap: 2rem;
 		}
 
 		.hero-left {
@@ -99,7 +96,7 @@
 		}
 
 		.hero-right img {
-			max-width: 280px;
+			max-width: 250px;
 		}
 
 		h1 {

@@ -26,13 +26,13 @@ const { title = "Sáamaka Soul Trust" } = Astro.props;
 			}
 
 			html {
-				background-color: #000000 !important;
+				background-color: #000000;
 			}
 
 			body {
 				width: 100%;
 				min-height: 100vh;
-				background-color: #000000 !important;
+				background-color: #000000;
 				color: #ffffff;
 				font-family: 'Inter', sans-serif;
 			}
@@ -45,6 +45,10 @@ const { title = "Sáamaka Soul Trust" } = Astro.props;
 			img {
 				max-width: 100%;
 				height: auto;
+			}
+
+			body.menu-open {
+				overflow: hidden;
 			}
 		</style>
 	</head>

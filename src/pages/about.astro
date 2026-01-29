@@ -1,0 +1,375 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="About - Sáamaka Soul Trust">
+	<Header />
+	<main>
+		<section class="hero">
+			<div class="hero-container">
+				<div class="hero-content">
+					<span class="subtitle">My Story 📚</span>
+					<h1>About Me</h1>
+				</div>
+			</div>
+		</section>
+
+		<section class="story">
+			<div class="story-container">
+				<div class="story-text">
+					<p class="lead">
+						You know the saying "God only gives his strongest soldiers his hardest battles"...?
+					</p>
+					<p class="highlight">That's me!</p>
+					<p>
+						During those battles I was the Black Sheep of the family, raising myself and I was a Loner. I really had nobody to turn to! The crazy part about that is that everybody always came to me for everything.
+					</p>
+				</div>
+				<div class="story-image">
+					<img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=500&h=600&fit=crop" alt="Portrait" />
+				</div>
+			</div>
+		</section>
+
+		<section class="questions">
+			<div class="questions-container">
+				<h2>When I Was Fighting My Battles, I Kept Coming Back to 4 Questions:</h2>
+				<div class="questions-list">
+					<div class="question">
+						<span class="number">1</span>
+						<p>Why do I have to suffer?</p>
+					</div>
+					<div class="question">
+						<span class="number">2</span>
+						<p>Why is it that, despite everything, I still have so much love to give?</p>
+					</div>
+					<div class="question">
+						<span class="number">3</span>
+						<p>Why do I long so deeply for love — from family, friends, and a husband — yet have not received it?</p>
+					</div>
+					<div class="question">
+						<span class="number">4</span>
+						<p>Why was I always in a struggle just to stay in school?</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="revelation">
+			<div class="revelation-container">
+				<h2>Now I Know!</h2>
+				<div class="quotes">
+					<blockquote>
+						"I have walked the path myself, and now I guide others along the way."
+					</blockquote>
+					<blockquote>
+						"What I have lived through does not make me a victim – it makes me a guide for those who are still on the journey."
+					</blockquote>
+				</div>
+				<p class="signature">Nankurunaisa ✨</p>
+			</div>
+		</section>
+
+		<section class="mission">
+			<div class="mission-container">
+				<h2>Missie & Visie</h2>
+				<div class="mission-content">
+					<div class="mission-block">
+						<h3>Missie</h3>
+						<p>
+							Stichting ondersteunt en begeleidt spirituele, culturele en persoonlijke ontwikkeling - met speciale aandacht voor de Sáamaka gemeenschap - en voor ieder mens die zich spiritueel verbindt met aarde, natuur en erfgoed.
+						</p>
+						<p>
+							Ik geloof dat ware heling ontstaat vanuit verbinding met jezelf, met de natuur, met voorouders en met de community. De stichting is een brug tussen werelden: tussen oud en nieuw, tussen individueel en collectief, tussen innerlijk weten en praktische actie.
+						</p>
+					</div>
+					<div class="mission-block">
+						<h3>Visie</h3>
+						<p>
+							Een wereld waarin mensen hun donker durven aankijken, zodat ze hun eigen licht leren ontsteken. Mijn merk staat voor waarheid, healing en empowerment - in coaching, kleding en in vastgoed.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.hero {
+		background-color: #000000;
+		padding: 4rem;
+		text-align: center;
+	}
+
+	.hero-container {
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+
+	.subtitle {
+		font-family: 'Inter', sans-serif;
+		font-size: 1rem;
+		color: #c9a227;
+		display: block;
+		margin-bottom: 1rem;
+	}
+
+	h1 {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 4rem;
+		font-weight: 400;
+		font-style: italic;
+		color: #ffffff;
+	}
+
+	.story {
+		background-color: #000000;
+		padding: 4rem;
+	}
+
+	.story-container {
+		display: grid;
+		grid-template-columns: 1fr 350px;
+		gap: 3rem;
+		max-width: 1100px;
+		margin: 0 auto;
+		align-items: center;
+	}
+
+	.story-text .lead {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 1.75rem;
+		font-style: italic;
+		color: #ffffff;
+		line-height: 1.5;
+		margin-bottom: 1.5rem;
+	}
+
+	.story-text .highlight {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 2.5rem;
+		font-style: italic;
+		color: #c9a227;
+		margin-bottom: 2rem;
+	}
+
+	.story-text p {
+		font-family: 'Inter', sans-serif;
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 1.8;
+		color: #ffffff;
+		margin-bottom: 1.5rem;
+	}
+
+	.story-image img {
+		width: 100%;
+		height: auto;
+		filter: grayscale(100%);
+		object-fit: cover;
+	}
+
+	.questions {
+		background-color: #000000;
+		padding: 5rem 4rem;
+		border-top: 1px solid #1a1a1a;
+	}
+
+	.questions-container {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.questions h2 {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 2rem;
+		font-weight: 400;
+		font-style: italic;
+		color: #ffffff;
+		margin-bottom: 3rem;
+		text-align: center;
+	}
+
+	.questions-list {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.question {
+		display: flex;
+		align-items: flex-start;
+		gap: 1.5rem;
+	}
+
+	.question .number {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 2rem;
+		color: #c9a227;
+		line-height: 1;
+	}
+
+	.question p {
+		font-family: 'Inter', sans-serif;
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 1.8;
+		color: #ffffff;
+	}
+
+	.revelation {
+		background-color: #000000;
+		padding: 5rem 4rem;
+		text-align: center;
+		border-top: 1px solid #1a1a1a;
+	}
+
+	.revelation-container {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.revelation h2 {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 3rem;
+		font-weight: 400;
+		color: #c9a227;
+		margin-bottom: 3rem;
+	}
+
+	.quotes {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.quotes blockquote {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 1.5rem;
+		font-style: italic;
+		color: #ffffff;
+		line-height: 1.6;
+	}
+
+	.signature {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 1.5rem;
+		font-style: italic;
+		color: #c9a227;
+	}
+
+	.mission {
+		background-color: #000000;
+		padding: 5rem 4rem;
+		border-top: 1px solid #1a1a1a;
+	}
+
+	.mission-container {
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+
+	.mission h2 {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 2.5rem;
+		font-weight: 400;
+		color: #ffffff;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.mission-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+	}
+
+	.mission-block h3 {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 1.75rem;
+		font-weight: 400;
+		color: #c9a227;
+		margin-bottom: 1.5rem;
+	}
+
+	.mission-block p {
+		font-family: 'Inter', sans-serif;
+		font-size: 0.95rem;
+		font-weight: 300;
+		line-height: 1.8;
+		color: #ffffff;
+		margin-bottom: 1rem;
+	}
+
+	@media (max-width: 768px) {
+		.hero {
+			padding: 2rem 1.5rem;
+		}
+
+		h1 {
+			font-size: 2.5rem;
+		}
+
+		.story {
+			padding: 2rem 1.5rem;
+		}
+
+		.story-container {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.story-image {
+			order: -1;
+			justify-self: center;
+		}
+
+		.story-image img {
+			max-width: 280px;
+		}
+
+		.story-text {
+			text-align: center;
+		}
+
+		.story-text .lead {
+			font-size: 1.5rem;
+		}
+
+		.story-text .highlight {
+			font-size: 2rem;
+		}
+
+		.questions {
+			padding: 3rem 1.5rem;
+		}
+
+		.questions h2 {
+			font-size: 1.5rem;
+		}
+
+		.revelation {
+			padding: 3rem 1.5rem;
+		}
+
+		.revelation h2 {
+			font-size: 2rem;
+		}
+
+		.quotes blockquote {
+			font-size: 1.25rem;
+		}
+
+		.mission {
+			padding: 3rem 1.5rem;
+		}
+
+		.mission-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+	}
+</style>

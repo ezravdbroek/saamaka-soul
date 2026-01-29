@@ -1,0 +1,282 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Coaching - Sáamaka Soul Trust">
+	<Header />
+	<main>
+		<section class="hero">
+			<div class="hero-container">
+				<div class="hero-content">
+					<span class="subtitle">Life Coach - Discover More</span>
+					<h1>Sáamaka Soul</h1>
+					<p class="tagline">From Roots to Remembrance</p>
+				</div>
+				<div class="hero-image">
+					<img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=500&h=600&fit=crop" alt="Meditation" />
+				</div>
+			</div>
+		</section>
+
+		<section class="intro">
+			<div class="intro-container">
+				<p>
+					We leven in een wereld die vaak van alles van ons verwacht. Maar ik geloof dat echte groei niet begint bij presteren, maar bij herinneren. Herinneren wie je bent, waar je vandaan komt, en wat jouw ziel werkelijk komt doen in dit leven.
+				</p>
+				<p>
+					Ik wil mensen begeleiden op hun reis naar zelfvertrouwen, zelfliefde en innerlijke balans. Niet door ze te veranderen, maar door ze te helpen herinneren wie ze al zijn. Iedereen verdient het om te stralen in zijn of haar eigen licht op een manier die puur, eerlijk en krachtig is.
+				</p>
+				<p>
+					Of het nu gaat om persoonlijke ontwikkeling, het doorbreken van beperkende overtuigingen of simpelweg het durven kiezen voor jezelf: ik sta naast je. Want jij bent het waard. En samen kunnen we bouwen aan een versie van jou die niet 'perfect' is, maar echt.
+				</p>
+			</div>
+		</section>
+
+		<section class="quote">
+			<div class="quote-container">
+				<blockquote>
+					<p>"Peace is the gift</p>
+					<p class="indent-1">that comes when</p>
+					<p class="indent-2">you align with your purpose"</p>
+				</blockquote>
+			</div>
+		</section>
+
+		<section class="pricing">
+			<div class="pricing-container">
+				<h2>1 op 1 Sessies</h2>
+				<div class="price-card">
+					<div class="price">€144,-</div>
+					<p class="price-detail">per uur</p>
+					<p class="price-note">De sessies duren 2 uur</p>
+					<a href="/booking" class="book-button">Boek een Sessie</a>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.hero {
+		background-color: #000000;
+		padding: 4rem;
+	}
+
+	.hero-container {
+		display: grid;
+		grid-template-columns: 1fr 350px;
+		gap: 3rem;
+		max-width: 1100px;
+		margin: 0 auto;
+		align-items: center;
+	}
+
+	.hero-content {
+		/* content */
+	}
+
+	.subtitle {
+		font-family: 'Inter', sans-serif;
+		font-size: 0.9rem;
+		color: #c9a227;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		display: block;
+		margin-bottom: 1rem;
+	}
+
+	h1 {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 4rem;
+		font-weight: 400;
+		font-style: italic;
+		color: #ffffff;
+		margin-bottom: 0.5rem;
+	}
+
+	.tagline {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 1.5rem;
+		font-style: italic;
+		color: #a0a0a0;
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		filter: grayscale(100%);
+		object-fit: cover;
+	}
+
+	.intro {
+		background-color: #000000;
+		padding: 4rem;
+	}
+
+	.intro-container {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.intro p {
+		font-family: 'Inter', sans-serif;
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 2;
+		color: #ffffff;
+		margin-bottom: 2rem;
+	}
+
+	.quote {
+		background-color: #000000;
+		padding: 5rem 4rem;
+		border-top: 1px solid #1a1a1a;
+		border-bottom: 1px solid #1a1a1a;
+	}
+
+	.quote-container {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	blockquote {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 2rem;
+		font-style: italic;
+		color: #c9a227;
+		line-height: 1.6;
+	}
+
+	blockquote p {
+		margin: 0;
+	}
+
+	.indent-1 {
+		padding-left: 3rem;
+	}
+
+	.indent-2 {
+		padding-left: 6rem;
+	}
+
+	.pricing {
+		background-color: #000000;
+		padding: 5rem 4rem;
+	}
+
+	.pricing-container {
+		max-width: 1100px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.pricing h2 {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 2.5rem;
+		font-weight: 400;
+		color: #ffffff;
+		margin-bottom: 3rem;
+	}
+
+	.price-card {
+		max-width: 400px;
+		margin: 0 auto;
+		padding: 3rem;
+		border: 1px solid #c9a227;
+	}
+
+	.price {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 3.5rem;
+		font-weight: 400;
+		color: #c9a227;
+	}
+
+	.price-detail {
+		font-family: 'Inter', sans-serif;
+		font-size: 1rem;
+		color: #a0a0a0;
+		margin-bottom: 0.5rem;
+	}
+
+	.price-note {
+		font-family: 'Inter', sans-serif;
+		font-size: 0.9rem;
+		color: #ffffff;
+		margin-bottom: 2rem;
+	}
+
+	.book-button {
+		display: inline-block;
+		padding: 1rem 2rem;
+		border: 1px solid #c9a227;
+		color: #ffffff;
+		font-family: 'Inter', sans-serif;
+		font-size: 1rem;
+		background: transparent;
+		transition: all 0.3s ease;
+	}
+
+	.book-button:hover {
+		background-color: #c9a227;
+		color: #000000;
+	}
+
+	@media (max-width: 768px) {
+		.hero {
+			padding: 2rem 1.5rem;
+		}
+
+		.hero-container {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.hero-content {
+			order: 2;
+			text-align: center;
+		}
+
+		.hero-image {
+			order: 1;
+			justify-self: center;
+		}
+
+		.hero-image img {
+			max-width: 280px;
+		}
+
+		h1 {
+			font-size: 2.5rem;
+		}
+
+		.intro {
+			padding: 2rem 1.5rem;
+		}
+
+		.quote {
+			padding: 3rem 1.5rem;
+		}
+
+		blockquote {
+			font-size: 1.5rem;
+		}
+
+		.indent-1, .indent-2 {
+			padding-left: 1rem;
+		}
+
+		.pricing {
+			padding: 3rem 1.5rem;
+		}
+
+		.price-card {
+			padding: 2rem;
+		}
+
+		.price {
+			font-size: 2.5rem;
+		}
+	}
+</style>

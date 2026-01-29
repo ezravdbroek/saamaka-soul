@@ -22,11 +22,11 @@ const services = [
 ---
 
 <section class="services">
-	<div class="services-grid">
+	<div class="services-container">
 		{services.map((service) => (
 			<div class="service-card">
 				<div class="service-image">
-					<img src={service.image} alt={service.title} />
+					<img src={service.image} alt={service.title} loading="lazy" />
 				</div>
 				<h3>{service.title}</h3>
 				<a href={service.href} class="service-button">{service.buttonText}</a>
@@ -37,14 +37,14 @@ const services = [
 
 <style>
 	.services {
-		padding: 5rem 4rem;
+		padding: 4rem;
 		background-color: #000000;
 	}
 
-	.services-grid {
+	.services-container {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: 2.5rem;
+		gap: 2rem;
 		max-width: 1100px;
 		margin: 0 auto;
 	}
@@ -72,9 +72,6 @@ const services = [
 		transition: filter 0.3s ease;
 	}
 
-	.service-card:hover .service-image img {
-		filter: grayscale(50%);
-	}
 
 	h3 {
 		font-family: 'Cormorant Garamond', serif;
@@ -103,16 +100,13 @@ const services = [
 
 	@media (max-width: 768px) {
 		.services {
-			padding: 3rem 2rem;
+			padding: 2rem 1.5rem;
 		}
 
-		.services-grid {
+		.services-container {
 			grid-template-columns: 1fr;
-			gap: 3rem;
-		}
-
-		.service-image {
-			max-width: 280px;
+			gap: 2.5rem;
+			max-width: 300px;
 		}
 	}
 </style>
