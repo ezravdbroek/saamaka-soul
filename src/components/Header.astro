@@ -1,0 +1,67 @@
+---
+const navItems = [
+	{ label: 'Home', href: '/' },
+	{ label: 'About', href: '/about' },
+	{ label: 'Coaching', href: '/coaching' },
+	{ label: 'Shop', href: '/shop' },
+	{ label: 'Projects', href: '/projects' },
+];
+---
+
+<header>
+	<a href="/" class="logo">SÁAMAKA SOUL TRUST</a>
+	<nav>
+		{navItems.map((item) => (
+			<a href={item.href}>{item.label}</a>
+		))}
+	</nav>
+</header>
+
+<style>
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.25rem 4rem;
+		background-color: #000000;
+	}
+
+	.logo {
+		font-family: 'Inter', sans-serif;
+		font-size: 1rem;
+		font-weight: 400;
+		letter-spacing: 0.2em;
+		color: #d4d4d4;
+	}
+
+	nav {
+		display: flex;
+		gap: 2rem;
+	}
+
+	nav a {
+		font-family: 'Inter', sans-serif;
+		font-size: 0.9rem;
+		font-weight: 400;
+		color: #d4d4d4;
+		transition: color 0.3s ease;
+	}
+
+	nav a:hover {
+		color: #ffffff;
+	}
+
+	@media (max-width: 768px) {
+		header {
+			flex-direction: column;
+			gap: 1.5rem;
+			padding: 1.5rem 2rem;
+		}
+
+		nav {
+			gap: 1.5rem;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+</style>
