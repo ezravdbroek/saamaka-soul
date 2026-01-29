@@ -8,28 +8,76 @@ import Header from '../components/Header.astro';
 	<main>
 		<section class="hero">
 			<div class="hero-container">
-				<div class="hero-content">
-					<span class="subtitle">Life Coach - Discover More</span>
-					<h1>Sáamaka Soul</h1>
-					<p class="tagline">From Roots to Remembrance</p>
-				</div>
-				<div class="hero-image">
-					<img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=500&h=600&fit=crop" alt="Meditation" />
-				</div>
+				<span class="subtitle">Life coach - Discover more</span>
+				<h1>Sáamaka Soul</h1>
+				<p class="tagline">From roots to remembrance</p>
+				<div class="hero-line"></div>
 			</div>
 		</section>
 
 		<section class="intro">
 			<div class="intro-container">
-				<p>
-					We leven in een wereld die vaak van alles van ons verwacht. Maar ik geloof dat echte groei niet begint bij presteren, maar bij herinneren. Herinneren wie je bent, waar je vandaan komt, en wat jouw ziel werkelijk komt doen in dit leven.
-				</p>
-				<p>
-					Ik wil mensen begeleiden op hun reis naar zelfvertrouwen, zelfliefde en innerlijke balans. Niet door ze te veranderen, maar door ze te helpen herinneren wie ze al zijn. Iedereen verdient het om te stralen in zijn of haar eigen licht op een manier die puur, eerlijk en krachtig is.
-				</p>
-				<p>
-					Of het nu gaat om persoonlijke ontwikkeling, het doorbreken van beperkende overtuigingen of simpelweg het durven kiezen voor jezelf: ik sta naast je. Want jij bent het waard. En samen kunnen we bouwen aan een versie van jou die niet 'perfect' is, maar echt.
-				</p>
+				<div class="intro-grid">
+					<div class="intro-card">
+						<p>We leven in een wereld die vaak van alles van ons verwacht.</p>
+						<p class="highlight">Maar ik geloof dat echte groei niet begint bij presteren, maar bij herinneren.</p>
+					</div>
+					<div class="intro-card">
+						<p>Herinneren wie je bent, waar je vandaan komt, en wat jouw ziel werkelijk komt doen in dit leven.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="approach">
+			<div class="approach-container">
+				<div class="approach-content">
+					<h2>Mijn aanpak</h2>
+					<p>Ik wil mensen begeleiden op hun reis naar zelfvertrouwen, zelfliefde en innerlijke balans.</p>
+					<p class="emphasis">Niet door ze te veranderen, maar door ze te helpen herinneren wie ze al zijn.</p>
+					<p>Iedereen verdient het om te stralen in zijn of haar eigen licht op een manier die puur, eerlijk en krachtig is.</p>
+				</div>
+				<div class="approach-image">
+					<img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=500&h=600&fit=crop" alt="Meditation" />
+				</div>
+			</div>
+		</section>
+
+		<section class="services-list">
+			<div class="services-container">
+				<div class="service-item">
+					<div class="service-icon">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.5">
+							<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+							<circle cx="12" cy="7" r="4"/>
+						</svg>
+					</div>
+					<p>Persoonlijke ontwikkeling</p>
+				</div>
+				<div class="service-item">
+					<div class="service-icon">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.5">
+							<path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+						</svg>
+					</div>
+					<p>Doorbreken van beperkende overtuigingen</p>
+				</div>
+				<div class="service-item">
+					<div class="service-icon">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.5">
+							<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+						</svg>
+					</div>
+					<p>Durven kiezen voor jezelf</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="commitment">
+			<div class="commitment-container">
+				<p class="large">Of het nu gaat om persoonlijke ontwikkeling, het doorbreken van beperkende overtuigingen of simpelweg het durven kiezen voor jezelf:</p>
+				<p class="gold">Ik sta naast je.</p>
+				<p>Want jij bent het waard. En samen kunnen we bouwen aan een versie van jou die niet 'perfect' is, maar echt.</p>
 			</div>
 		</section>
 
@@ -45,12 +93,12 @@ import Header from '../components/Header.astro';
 
 		<section class="pricing">
 			<div class="pricing-container">
-				<h2>1 op 1 Sessies</h2>
+				<h2>1 op 1 sessies</h2>
 				<div class="price-card">
 					<div class="price">€144,-</div>
 					<p class="price-detail">per uur</p>
 					<p class="price-note">De sessies duren 2 uur</p>
-					<a href="/booking" class="book-button">Boek een Sessie</a>
+					<a href="/booking" class="book-button">Boek een sessie</a>
 				</div>
 			</div>
 		</section>
@@ -60,28 +108,21 @@ import Header from '../components/Header.astro';
 <style>
 	.hero {
 		background-color: #000000;
-		padding: 4rem;
+		padding: 5rem 4rem;
+		text-align: center;
 	}
 
 	.hero-container {
-		display: grid;
-		grid-template-columns: 1fr 350px;
-		gap: 3rem;
 		max-width: 1100px;
 		margin: 0 auto;
-		align-items: center;
-	}
-
-	.hero-content {
-		/* content */
 	}
 
 	.subtitle {
 		font-family: 'Inter', sans-serif;
-		font-size: 0.9rem;
+		font-size: 0.85rem;
 		color: #c9a227;
 		text-transform: uppercase;
-		letter-spacing: 0.1em;
+		letter-spacing: 0.2em;
 		display: block;
 		margin-bottom: 1rem;
 	}
@@ -100,13 +141,14 @@ import Header from '../components/Header.astro';
 		font-size: 1.5rem;
 		font-style: italic;
 		color: #a0a0a0;
+		margin-bottom: 1.5rem;
 	}
 
-	.hero-image img {
-		width: 100%;
-		height: auto;
-		filter: grayscale(100%);
-		object-fit: cover;
+	.hero-line {
+		width: 60px;
+		height: 1px;
+		background-color: #c9a227;
+		margin: 0 auto;
 	}
 
 	.intro {
@@ -115,28 +157,152 @@ import Header from '../components/Header.astro';
 	}
 
 	.intro-container {
-		max-width: 800px;
+		max-width: 1100px;
 		margin: 0 auto;
 	}
 
-	.intro p {
+	.intro-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+	}
+
+	.intro-card {
+		padding: 2rem;
+		border: 1px solid #1a1a1a;
+	}
+
+	.intro-card p {
 		font-family: 'Inter', sans-serif;
 		font-size: 1rem;
 		font-weight: 300;
-		line-height: 2;
+		line-height: 1.8;
 		color: #ffffff;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.intro-card p:last-child {
+		margin-bottom: 0;
+	}
+
+	.intro-card .highlight {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 1.25rem;
+		font-style: italic;
+		color: #c9a227;
+	}
+
+	.approach {
+		background-color: #0a0a0a;
+		padding: 4rem;
+	}
+
+	.approach-container {
+		display: grid;
+		grid-template-columns: 1fr 350px;
+		gap: 4rem;
+		max-width: 1100px;
+		margin: 0 auto;
+		align-items: center;
+	}
+
+	.approach-content h2 {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 2rem;
+		font-weight: 400;
+		color: #ffffff;
+		margin-bottom: 1.5rem;
+	}
+
+	.approach-content p {
+		font-family: 'Inter', sans-serif;
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 1.8;
+		color: #a0a0a0;
+		margin-bottom: 1rem;
+	}
+
+	.approach-content .emphasis {
+		color: #ffffff;
+		font-weight: 400;
+	}
+
+	.approach-image img {
+		width: 100%;
+		height: auto;
+		filter: grayscale(100%);
+	}
+
+	.services-list {
+		background-color: #000000;
+		padding: 4rem;
+	}
+
+	.services-container {
+		display: flex;
+		justify-content: center;
+		gap: 4rem;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+
+	.service-item {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.service-item p {
+		font-family: 'Inter', sans-serif;
+		font-size: 0.95rem;
+		color: #ffffff;
+	}
+
+	.commitment {
+		background-color: #000000;
+		padding: 4rem;
+		text-align: center;
+		border-top: 1px solid #1a1a1a;
+	}
+
+	.commitment-container {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	.commitment .large {
+		font-family: 'Inter', sans-serif;
+		font-size: 1.1rem;
+		font-weight: 300;
+		line-height: 1.8;
+		color: #a0a0a0;
+		margin-bottom: 1.5rem;
+	}
+
+	.commitment .gold {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 2.5rem;
+		font-style: italic;
+		color: #c9a227;
+		margin-bottom: 1.5rem;
+	}
+
+	.commitment p:last-child {
+		font-family: 'Inter', sans-serif;
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 1.8;
+		color: #ffffff;
 	}
 
 	.quote {
-		background-color: #000000;
+		background-color: #0a0a0a;
 		padding: 5rem 4rem;
-		border-top: 1px solid #1a1a1a;
-		border-bottom: 1px solid #1a1a1a;
 	}
 
 	.quote-container {
-		max-width: 800px;
+		max-width: 700px;
 		margin: 0 auto;
 	}
 
@@ -225,26 +391,7 @@ import Header from '../components/Header.astro';
 
 	@media (max-width: 768px) {
 		.hero {
-			padding: 2rem 1.5rem;
-		}
-
-		.hero-container {
-			grid-template-columns: 1fr;
-			gap: 2rem;
-		}
-
-		.hero-content {
-			order: 2;
-			text-align: center;
-		}
-
-		.hero-image {
-			order: 1;
-			justify-self: center;
-		}
-
-		.hero-image img {
-			max-width: 280px;
+			padding: 3rem 1.5rem;
 		}
 
 		h1 {
@@ -253,6 +400,46 @@ import Header from '../components/Header.astro';
 
 		.intro {
 			padding: 2rem 1.5rem;
+		}
+
+		.intro-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.approach {
+			padding: 2rem 1.5rem;
+		}
+
+		.approach-container {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.approach-image {
+			order: -1;
+			justify-self: center;
+		}
+
+		.approach-image img {
+			max-width: 280px;
+		}
+
+		.services-list {
+			padding: 2rem 1.5rem;
+		}
+
+		.services-container {
+			flex-direction: column;
+			gap: 1.5rem;
+			align-items: center;
+		}
+
+		.commitment {
+			padding: 2rem 1.5rem;
+		}
+
+		.commitment .gold {
+			font-size: 2rem;
 		}
 
 		.quote {

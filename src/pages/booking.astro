@@ -8,40 +8,42 @@ import Header from '../components/Header.astro';
 	<main>
 		<section class="hero">
 			<div class="hero-container">
-				<h1>Book a Session</h1>
+				<span class="subtitle">Coaching</span>
+				<h1>Book a session</h1>
 				<p class="tagline">Begin je reis naar zelfontdekking</p>
+				<div class="hero-line"></div>
 			</div>
 		</section>
 
 		<section class="booking-info">
 			<div class="booking-container">
 				<div class="session-details">
-					<h2>1 op 1 Coaching Sessie</h2>
+					<h2>1 op 1 coaching sessie</h2>
 					<div class="price">€144,- <span>per uur</span></div>
 					<p class="duration">Sessies duren 2 uur</p>
 
 					<div class="features">
 						<div class="feature">
-							<span class="icon">✓</span>
+							<span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span>
 							<p>Persoonlijke begeleiding</p>
 						</div>
 						<div class="feature">
-							<span class="icon">✓</span>
+							<span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span>
 							<p>Veilige en vertrouwelijke omgeving</p>
 						</div>
 						<div class="feature">
-							<span class="icon">✓</span>
+							<span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span>
 							<p>Op maat gemaakte aanpak</p>
 						</div>
 						<div class="feature">
-							<span class="icon">✓</span>
+							<span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span>
 							<p>Online of fysiek mogelijk</p>
 						</div>
 					</div>
 				</div>
 
 				<div class="contact-form">
-					<h3>Neem Contact Op</h3>
+					<h3>Neem contact op</h3>
 					<p class="form-intro">Vul het formulier in en ik neem zo snel mogelijk contact met je op om een sessie in te plannen.</p>
 
 					<form>
@@ -90,11 +92,29 @@ import Header from '../components/Header.astro';
 		margin-bottom: 0.5rem;
 	}
 
+	.subtitle {
+		font-family: 'Inter', sans-serif;
+		font-size: 0.85rem;
+		color: #c9a227;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		display: block;
+		margin-bottom: 1rem;
+	}
+
 	.tagline {
 		font-family: 'Cormorant Garamond', serif;
 		font-size: 1.5rem;
 		font-style: italic;
 		color: #a0a0a0;
+		margin-bottom: 1.5rem;
+	}
+
+	.hero-line {
+		width: 60px;
+		height: 1px;
+		background-color: #c9a227;
+		margin: 0 auto;
 	}
 
 	.booking-info {
@@ -155,8 +175,9 @@ import Header from '../components/Header.astro';
 	}
 
 	.feature .icon {
-		color: #c9a227;
-		font-size: 1.25rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.feature p {

@@ -8,32 +8,36 @@ import Header from '../components/Header.astro';
 	<main>
 		<section class="hero">
 			<div class="hero-container">
-				<h1>Spiritual T-Shirts</h1>
-				<p class="tagline">From Shadow To Self</p>
+				<span class="hero-subtitle">Sáamaka Soul collection</span>
+				<h1>Spiritual T-shirts</h1>
+				<p class="tagline">From shadow to self</p>
+				<div class="hero-line"></div>
 			</div>
 		</section>
 
 		<section class="story">
 			<div class="story-container">
-				<div class="story-content">
+				<div class="story-header">
 					<h2>F.S.T.S.</h2>
-					<p class="subtitle">Het verhaal achter de Zwarte T-shirts</p>
-
-					<div class="story-text">
-						<p class="lead">In het donker begint alles.</p>
-						<p>
-							Niet alleen het universum. Niet alleen het leven in de baarmoeder. Maar ook groei, zelfreflectie en transformatie.
-						</p>
-						<p>
-							Onze t-shirts zijn zwart - niet omdat zwart 'gewoon mooi' is, maar omdat het donker de plek is waar je jezelf tegenkomt. Waar je vragen stelt in plaats van antwoorden uitspuwt. Waar je leert, struikelt, opstaat en jezelf opnieuw vormgeeft.
-						</p>
-						<p>
-							Elke print op onze t-shirts - of het nu een tekst is die je wakker schudt, of een beeld dat je laat nadenken - is bedoeld om een gesprek te starten. Niet met de wereld, maar eerst met jezelf.
-						</p>
-					</div>
+					<p class="subtitle">Het verhaal achter de zwarte t-shirts</p>
 				</div>
 				<div class="story-image">
 					<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=500&h=600&fit=crop" alt="Black T-shirt" />
+				</div>
+			</div>
+		</section>
+
+		<section class="story-cards">
+			<div class="cards-container">
+				<div class="story-card featured">
+					<p class="lead">In het donker begint alles.</p>
+					<p>Niet alleen het universum. Niet alleen het leven in de baarmoeder. Maar ook groei, zelfreflectie en transformatie.</p>
+				</div>
+				<div class="story-card">
+					<p>Onze t-shirts zijn zwart - niet omdat zwart 'gewoon mooi' is, maar omdat het donker de plek is waar je jezelf tegenkomt. Waar je vragen stelt in plaats van antwoorden uitspuwt.</p>
+				</div>
+				<div class="story-card">
+					<p>Waar je leert, struikelt, opstaat en jezelf opnieuw vormgeeft. Elke print is bedoeld om een gesprek te starten. Niet met de wereld, maar eerst met jezelf.</p>
 				</div>
 			</div>
 		</section>
@@ -53,7 +57,7 @@ import Header from '../components/Header.astro';
 				<h2>T-Shirts</h2>
 				<div class="price-card">
 					<div class="price">€88,-</div>
-					<p class="price-note">8 per seizoen zijn Exclusief Limited Edition</p>
+					<p class="price-note">8 per seizoen zijn exclusief limited edition</p>
 					<p class="price-detail">(dus komen niet meer terug)</p>
 				</div>
 			</div>
@@ -91,11 +95,29 @@ import Header from '../components/Header.astro';
 		margin-bottom: 0.5rem;
 	}
 
+	.hero-subtitle {
+		font-family: 'Inter', sans-serif;
+		font-size: 0.85rem;
+		color: #c9a227;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		display: block;
+		margin-bottom: 1rem;
+	}
+
 	.tagline {
 		font-family: 'Cormorant Garamond', serif;
 		font-size: 1.5rem;
 		font-style: italic;
-		color: #c9a227;
+		color: #a0a0a0;
+		margin-bottom: 1.5rem;
+	}
+
+	.hero-line {
+		width: 60px;
+		height: 1px;
+		background-color: #c9a227;
+		margin: 0 auto;
 	}
 
 	.story {
@@ -105,14 +127,14 @@ import Header from '../components/Header.astro';
 
 	.story-container {
 		display: grid;
-		grid-template-columns: 1fr 400px;
-		gap: 3rem;
+		grid-template-columns: 1fr 350px;
+		gap: 4rem;
 		max-width: 1100px;
 		margin: 0 auto;
 		align-items: center;
 	}
 
-	.story-content h2 {
+	.story-header h2 {
 		font-family: 'Cormorant Garamond', serif;
 		font-size: 3rem;
 		font-weight: 400;
@@ -120,29 +142,11 @@ import Header from '../components/Header.astro';
 		margin-bottom: 0.5rem;
 	}
 
-	.story-content .subtitle {
+	.story-header .subtitle {
 		font-family: 'Cormorant Garamond', serif;
 		font-size: 1.25rem;
 		font-style: italic;
 		color: #a0a0a0;
-		margin-bottom: 2rem;
-	}
-
-	.story-text .lead {
-		font-family: 'Cormorant Garamond', serif;
-		font-size: 1.75rem;
-		font-style: italic;
-		color: #ffffff;
-		margin-bottom: 1.5rem;
-	}
-
-	.story-text p {
-		font-family: 'Inter', sans-serif;
-		font-size: 1rem;
-		font-weight: 300;
-		line-height: 1.8;
-		color: #ffffff;
-		margin-bottom: 1.5rem;
 	}
 
 	.story-image img {
@@ -150,6 +154,50 @@ import Header from '../components/Header.astro';
 		height: auto;
 		filter: grayscale(100%);
 		object-fit: cover;
+	}
+
+	.story-cards {
+		background-color: #000000;
+		padding: 0 4rem 4rem;
+	}
+
+	.cards-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+
+	.story-card {
+		padding: 2rem;
+		border: 1px solid #1a1a1a;
+	}
+
+	.story-card.featured {
+		grid-column: span 2;
+		border-left: 2px solid #c9a227;
+		background: linear-gradient(90deg, rgba(201, 162, 39, 0.05) 0%, transparent 100%);
+	}
+
+	.story-card .lead {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 1.75rem;
+		font-style: italic;
+		color: #c9a227;
+		margin-bottom: 1rem;
+	}
+
+	.story-card p {
+		font-family: 'Inter', sans-serif;
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 1.8;
+		color: #ffffff;
+	}
+
+	.story-card p:last-child {
+		margin-bottom: 0;
 	}
 
 	.belief {
@@ -289,15 +337,27 @@ import Header from '../components/Header.astro';
 			max-width: 280px;
 		}
 
-		.story-content {
+		.story-header {
 			text-align: center;
 		}
 
-		.story-content h2 {
+		.story-header h2 {
 			font-size: 2rem;
 		}
 
-		.story-text .lead {
+		.story-cards {
+			padding: 0 1.5rem 2rem;
+		}
+
+		.cards-container {
+			grid-template-columns: 1fr;
+		}
+
+		.story-card.featured {
+			grid-column: span 1;
+		}
+
+		.story-card .lead {
 			font-size: 1.5rem;
 		}
 

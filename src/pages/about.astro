@@ -8,10 +8,9 @@ import Header from '../components/Header.astro';
 	<main>
 		<section class="hero">
 			<div class="hero-container">
-				<div class="hero-content">
-					<span class="subtitle">My Story 📚</span>
-					<h1>About Me</h1>
-				</div>
+				<span class="subtitle">My story</span>
+				<h1>About me</h1>
+				<div class="hero-line"></div>
 			</div>
 		</section>
 
@@ -22,9 +21,6 @@ import Header from '../components/Header.astro';
 						You know the saying "God only gives his strongest soldiers his hardest battles"...?
 					</p>
 					<p class="highlight">That's me!</p>
-					<p>
-						During those battles I was the Black Sheep of the family, raising myself and I was a Loner. I really had nobody to turn to! The crazy part about that is that everybody always came to me for everything.
-					</p>
 				</div>
 				<div class="story-image">
 					<img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=500&h=600&fit=crop" alt="Portrait" />
@@ -32,10 +28,21 @@ import Header from '../components/Header.astro';
 			</div>
 		</section>
 
+		<section class="backstory">
+			<div class="backstory-container">
+				<div class="backstory-card">
+					<p>During those battles I was the black sheep of the family, raising myself and I was a loner.</p>
+				</div>
+				<div class="backstory-card">
+					<p>I really had nobody to turn to! The crazy part about that is that everybody always came to me for everything.</p>
+				</div>
+			</div>
+		</section>
+
 		<section class="questions">
 			<div class="questions-container">
-				<h2>When I Was Fighting My Battles, I Kept Coming Back to 4 Questions:</h2>
-				<div class="questions-list">
+				<h2>When I was fighting my battles, I kept coming back to 4 questions:</h2>
+				<div class="questions-grid">
 					<div class="question">
 						<span class="number">1</span>
 						<p>Why do I have to suffer?</p>
@@ -58,7 +65,7 @@ import Header from '../components/Header.astro';
 
 		<section class="revelation">
 			<div class="revelation-container">
-				<h2>Now I Know!</h2>
+				<h2>Now I know!</h2>
 				<div class="quotes">
 					<blockquote>
 						"I have walked the path myself, and now I guide others along the way."
@@ -67,7 +74,7 @@ import Header from '../components/Header.astro';
 						"What I have lived through does not make me a victim – it makes me a guide for those who are still on the journey."
 					</blockquote>
 				</div>
-				<p class="signature">Nankurunaisa ✨</p>
+				<p class="signature">Nankurunaisa</p>
 			</div>
 		</section>
 
@@ -76,21 +83,34 @@ import Header from '../components/Header.astro';
 				<h2>Missie & Visie</h2>
 				<div class="mission-content">
 					<div class="mission-block">
+						<div class="mission-icon">
+							<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.5">
+								<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+							</svg>
+						</div>
 						<h3>Missie</h3>
-						<p>
-							Stichting ondersteunt en begeleidt spirituele, culturele en persoonlijke ontwikkeling - met speciale aandacht voor de Sáamaka gemeenschap - en voor ieder mens die zich spiritueel verbindt met aarde, natuur en erfgoed.
-						</p>
-						<p>
-							Ik geloof dat ware heling ontstaat vanuit verbinding met jezelf, met de natuur, met voorouders en met de community. De stichting is een brug tussen werelden: tussen oud en nieuw, tussen individueel en collectief, tussen innerlijk weten en praktische actie.
-						</p>
+						<p>Ondersteuning en begeleiding van spirituele, culturele en persoonlijke ontwikkeling.</p>
+						<p>Met speciale aandacht voor de Sáamaka gemeenschap en voor ieder mens die zich spiritueel verbindt met aarde, natuur en erfgoed.</p>
 					</div>
 					<div class="mission-block">
+						<div class="mission-icon">
+							<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.5">
+								<circle cx="12" cy="12" r="10"/>
+								<path d="M12 6v6l4 2"/>
+							</svg>
+						</div>
 						<h3>Visie</h3>
-						<p>
-							Een wereld waarin mensen hun donker durven aankijken, zodat ze hun eigen licht leren ontsteken. Mijn merk staat voor waarheid, healing en empowerment - in coaching, kleding en in vastgoed.
-						</p>
+						<p>Een wereld waarin mensen hun donker durven aankijken, zodat ze hun eigen licht leren ontsteken.</p>
+						<p>Mijn merk staat voor waarheid, healing en empowerment.</p>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<section class="belief">
+			<div class="belief-container">
+				<p>Ik geloof dat ware heling ontstaat vanuit verbinding met jezelf, met de natuur, met voorouders en met de community.</p>
+				<p class="highlight">De stichting is een brug tussen werelden: tussen oud en nieuw, tussen individueel en collectief, tussen innerlijk weten en praktische actie.</p>
 			</div>
 		</section>
 	</main>
@@ -99,7 +119,7 @@ import Header from '../components/Header.astro';
 <style>
 	.hero {
 		background-color: #000000;
-		padding: 4rem;
+		padding: 5rem 4rem;
 		text-align: center;
 	}
 
@@ -110,8 +130,10 @@ import Header from '../components/Header.astro';
 
 	.subtitle {
 		font-family: 'Inter', sans-serif;
-		font-size: 1rem;
+		font-size: 0.85rem;
 		color: #c9a227;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
 		display: block;
 		margin-bottom: 1rem;
 	}
@@ -122,6 +144,14 @@ import Header from '../components/Header.astro';
 		font-weight: 400;
 		font-style: italic;
 		color: #ffffff;
+		margin-bottom: 1.5rem;
+	}
+
+	.hero-line {
+		width: 60px;
+		height: 1px;
+		background-color: #c9a227;
+		margin: 0 auto;
 	}
 
 	.story {
@@ -132,7 +162,7 @@ import Header from '../components/Header.astro';
 	.story-container {
 		display: grid;
 		grid-template-columns: 1fr 350px;
-		gap: 3rem;
+		gap: 4rem;
 		max-width: 1100px;
 		margin: 0 auto;
 		align-items: center;
@@ -149,19 +179,9 @@ import Header from '../components/Header.astro';
 
 	.story-text .highlight {
 		font-family: 'Cormorant Garamond', serif;
-		font-size: 2.5rem;
+		font-size: 3rem;
 		font-style: italic;
 		color: #c9a227;
-		margin-bottom: 2rem;
-	}
-
-	.story-text p {
-		font-family: 'Inter', sans-serif;
-		font-size: 1rem;
-		font-weight: 300;
-		line-height: 1.8;
-		color: #ffffff;
-		margin-bottom: 1.5rem;
 	}
 
 	.story-image img {
@@ -171,14 +191,40 @@ import Header from '../components/Header.astro';
 		object-fit: cover;
 	}
 
-	.questions {
+	.backstory {
 		background-color: #000000;
+		padding: 2rem 4rem 4rem;
+	}
+
+	.backstory-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+
+	.backstory-card {
+		padding: 2rem;
+		border-left: 2px solid #c9a227;
+		background: linear-gradient(90deg, rgba(201, 162, 39, 0.05) 0%, transparent 100%);
+	}
+
+	.backstory-card p {
+		font-family: 'Inter', sans-serif;
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 1.8;
+		color: #ffffff;
+	}
+
+	.questions {
+		background-color: #0a0a0a;
 		padding: 5rem 4rem;
-		border-top: 1px solid #1a1a1a;
 	}
 
 	.questions-container {
-		max-width: 800px;
+		max-width: 900px;
 		margin: 0 auto;
 	}
 
@@ -192,30 +238,35 @@ import Header from '../components/Header.astro';
 		text-align: center;
 	}
 
-	.questions-list {
-		display: flex;
-		flex-direction: column;
+	.questions-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		gap: 2rem;
 	}
 
 	.question {
-		display: flex;
-		align-items: flex-start;
-		gap: 1.5rem;
+		padding: 2rem;
+		border: 1px solid #1a1a1a;
+		transition: border-color 0.3s ease;
+	}
+
+	.question:hover {
+		border-color: #c9a227;
 	}
 
 	.question .number {
 		font-family: 'Cormorant Garamond', serif;
-		font-size: 2rem;
+		font-size: 2.5rem;
 		color: #c9a227;
-		line-height: 1;
+		display: block;
+		margin-bottom: 1rem;
 	}
 
 	.question p {
 		font-family: 'Inter', sans-serif;
-		font-size: 1rem;
+		font-size: 0.95rem;
 		font-weight: 300;
-		line-height: 1.8;
+		line-height: 1.7;
 		color: #ffffff;
 	}
 
@@ -223,11 +274,10 @@ import Header from '../components/Header.astro';
 		background-color: #000000;
 		padding: 5rem 4rem;
 		text-align: center;
-		border-top: 1px solid #1a1a1a;
 	}
 
 	.revelation-container {
-		max-width: 800px;
+		max-width: 700px;
 		margin: 0 auto;
 	}
 
@@ -248,7 +298,7 @@ import Header from '../components/Header.astro';
 
 	.quotes blockquote {
 		font-family: 'Cormorant Garamond', serif;
-		font-size: 1.5rem;
+		font-size: 1.35rem;
 		font-style: italic;
 		color: #ffffff;
 		line-height: 1.6;
@@ -256,7 +306,7 @@ import Header from '../components/Header.astro';
 
 	.signature {
 		font-family: 'Cormorant Garamond', serif;
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		font-style: italic;
 		color: #c9a227;
 	}
@@ -278,13 +328,21 @@ import Header from '../components/Header.astro';
 		font-weight: 400;
 		color: #ffffff;
 		text-align: center;
-		margin-bottom: 3rem;
+		margin-bottom: 4rem;
 	}
 
 	.mission-content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 3rem;
+		gap: 4rem;
+	}
+
+	.mission-block {
+		text-align: center;
+	}
+
+	.mission-icon {
+		margin-bottom: 1.5rem;
 	}
 
 	.mission-block h3 {
@@ -300,13 +358,41 @@ import Header from '../components/Header.astro';
 		font-size: 0.95rem;
 		font-weight: 300;
 		line-height: 1.8;
-		color: #ffffff;
+		color: #a0a0a0;
 		margin-bottom: 1rem;
+	}
+
+	.belief {
+		background-color: #0a0a0a;
+		padding: 4rem;
+		text-align: center;
+	}
+
+	.belief-container {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	.belief p {
+		font-family: 'Inter', sans-serif;
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 1.8;
+		color: #a0a0a0;
+		margin-bottom: 1.5rem;
+	}
+
+	.belief .highlight {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 1.25rem;
+		font-style: italic;
+		color: #ffffff;
+		line-height: 1.6;
 	}
 
 	@media (max-width: 768px) {
 		.hero {
-			padding: 2rem 1.5rem;
+			padding: 3rem 1.5rem;
 		}
 
 		h1 {
@@ -335,12 +421,16 @@ import Header from '../components/Header.astro';
 			text-align: center;
 		}
 
-		.story-text .lead {
-			font-size: 1.5rem;
-		}
-
 		.story-text .highlight {
 			font-size: 2rem;
+		}
+
+		.backstory {
+			padding: 2rem 1.5rem;
+		}
+
+		.backstory-container {
+			grid-template-columns: 1fr;
 		}
 
 		.questions {
@@ -349,6 +439,10 @@ import Header from '../components/Header.astro';
 
 		.questions h2 {
 			font-size: 1.5rem;
+		}
+
+		.questions-grid {
+			grid-template-columns: 1fr;
 		}
 
 		.revelation {
@@ -360,7 +454,7 @@ import Header from '../components/Header.astro';
 		}
 
 		.quotes blockquote {
-			font-size: 1.25rem;
+			font-size: 1.15rem;
 		}
 
 		.mission {
@@ -369,7 +463,11 @@ import Header from '../components/Header.astro';
 
 		.mission-content {
 			grid-template-columns: 1fr;
-			gap: 2rem;
+			gap: 3rem;
+		}
+
+		.belief {
+			padding: 2rem 1.5rem;
 		}
 	}
 </style>
