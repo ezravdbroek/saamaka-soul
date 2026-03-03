@@ -11,7 +11,7 @@ import Header from '../components/Header.astro';
 			<div class="hero-container">
 				<div class="hero-image">
 					<img
-						src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=800&fit=crop&crop=face"
+						src="/portrait-hero.jpeg"
 						alt="Portrait"
 						loading="eager"
 					/>
@@ -72,8 +72,8 @@ import Header from '../components/Header.astro';
 			<div class="immersion-container">
 				<div class="immersion-image">
 					<img
-						src="https://images.unsplash.com/photo-1536147116438-62679a5e01f2?w=600&h=800&fit=crop"
-						alt="Tropical nature"
+						src="/Private-Suriname-Immersion.jpg"
+						alt="Suriname Immersion"
 						loading="lazy"
 					/>
 				</div>
@@ -84,6 +84,7 @@ import Header from '../components/Header.astro';
 					<p>A curated, 1:1 experience designed for deep integration and strategic recalibration.</p>
 				</div>
 			</div>
+			<div class="immersion-watermark">PRIVATE ADVISORY</div>
 		</section>
 
 		<!-- SÁAMAKA SOUL VISION SECTION -->
@@ -93,6 +94,7 @@ import Header from '../components/Header.astro';
 				<span class="vision-label">FUTURE PROJECTS</span>
 				<p>Sáamaka Soul is evolving into a broader leadership and cultural impact platform.</p>
 				<p>Future projects include select intensives, legacy-driven initiatives and global collaborations rooted in identity, power and responsibility.</p>
+				<span class="vision-link">more without noise</span>
 			</div>
 		</section>
 	</main>
@@ -134,7 +136,7 @@ import Header from '../components/Header.astro';
 		font-family: 'Inter', sans-serif;
 		font-size: 0.85rem;
 		font-weight: 300;
-		color: #bbbbbb;
+		color: #ffffff;
 		line-height: 1.8;
 	}
 
@@ -202,7 +204,7 @@ import Header from '../components/Header.astro';
 		font-size: 0.7rem;
 		font-weight: 500;
 		letter-spacing: 0.2em;
-		color: #aaaaaa;
+		color: #c9a227;
 		text-transform: uppercase;
 		display: block;
 		margin-bottom: 1.25rem;
@@ -234,13 +236,27 @@ import Header from '../components/Header.astro';
 		left: 0;
 		font-size: 1.5rem;
 		line-height: 1.2;
-		color: #888888;
+		color: #c9a227;
 	}
 
 	/* ========== IMMERSION SECTION ========== */
 	.immersion {
 		padding: 5rem 4rem;
 		border-top: 1px solid #1a1a1a;
+		position: relative;
+	}
+
+	.immersion-watermark {
+		font-family: 'Inter', sans-serif;
+		font-size: 0.6rem;
+		font-weight: 400;
+		letter-spacing: 0.25em;
+		color: #a89060;
+		text-transform: uppercase;
+		text-align: right;
+		max-width: 1100px;
+		margin: 2rem auto 0;
+		opacity: 0.5;
 	}
 
 	.immersion-container {
@@ -274,7 +290,7 @@ import Header from '../components/Header.astro';
 		font-size: 0.7rem;
 		font-weight: 500;
 		letter-spacing: 0.2em;
-		color: #aaaaaa;
+		color: #c9a227;
 		text-transform: uppercase;
 		display: block;
 		margin-bottom: 2rem;
@@ -315,7 +331,7 @@ import Header from '../components/Header.astro';
 		font-size: 0.7rem;
 		font-weight: 500;
 		letter-spacing: 0.2em;
-		color: #aaaaaa;
+		color: #ffffff;
 		text-transform: uppercase;
 		display: block;
 		margin-bottom: 2rem;
@@ -325,9 +341,21 @@ import Header from '../components/Header.astro';
 		font-family: 'Inter', sans-serif;
 		font-size: 0.95rem;
 		font-weight: 300;
-		color: #cccccc;
+		color: #ffffff;
 		line-height: 1.8;
 		margin-bottom: 1rem;
+	}
+
+	.vision-link {
+		font-family: 'Inter', sans-serif;
+		font-size: 0.8rem;
+		font-weight: 300;
+		color: #ffffff;
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		margin-top: 1rem;
+		display: inline-block;
+		cursor: default;
 	}
 
 	/* ========== RESPONSIVE ========== */
