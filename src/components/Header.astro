@@ -1,63 +1,19 @@
 ---
-const navItems = [
-	{ label: 'Home', href: '/' },
-	{ label: 'About', href: '/about' },
-	{ label: 'Coaching', href: '/coaching' },
-	{ label: 'Booking', href: '/booking' },
-	{ label: 'Shop', href: '/shop' },
-	{ label: 'Projects', href: '/projects' },
-];
-
-const currentPath = Astro.url.pathname;
 ---
 
 <header>
 	<div class="header-container">
-		<a href="/" class="logo">SÁAMAKA SOUL TRUST</a>
-
-		<button class="hamburger" id="hamburger" aria-label="Toggle menu">
-			<span></span>
-			<span></span>
-			<span></span>
-		</button>
-
-		<nav id="nav-menu">
-			{navItems.map((item) => (
-				<a
-					href={item.href}
-					class:list={[{ active: currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href)) }]}
-				>
-					{item.label}
-				</a>
-			))}
-		</nav>
+		<a href="/" class="logo" aria-label="Sáamaka Soul Home">
+			<img src="/logo.svg" alt="Sáamaka Soul" width="40" height="40" />
+		</a>
+		<span class="label">PRIVATE ADVISORY</span>
 	</div>
 </header>
-
-<script>
-	const hamburger = document.getElementById('hamburger');
-	const navMenu = document.getElementById('nav-menu');
-
-	hamburger?.addEventListener('click', () => {
-		hamburger.classList.toggle('active');
-		navMenu?.classList.toggle('active');
-		document.body.classList.toggle('menu-open');
-	});
-
-	const navLinks = navMenu?.querySelectorAll('a');
-	navLinks?.forEach(link => {
-		link.addEventListener('click', () => {
-			hamburger?.classList.remove('active');
-			navMenu?.classList.remove('active');
-			document.body.classList.remove('menu-open');
-		});
-	});
-</script>
 
 <style>
 	header {
 		background-color: #000000;
-		padding: 1.25rem 4rem;
+		padding: 2rem 4rem;
 	}
 
 	.header-container {
@@ -68,128 +24,33 @@ const currentPath = Astro.url.pathname;
 		align-items: center;
 	}
 
-	.logo {
-		font-family: 'Inter', sans-serif;
-		font-size: 0.9rem;
-		font-weight: 400;
-		letter-spacing: 0.2em;
-		color: #d4d4d4;
-		z-index: 1001;
-	}
-
-	nav {
-		display: flex;
-		gap: 2rem;
-	}
-
-	nav a {
-		font-family: 'Inter', sans-serif;
-		font-size: 0.9rem;
-		font-weight: 400;
-		color: #666666;
-		transition: color 0.3s ease;
-		position: relative;
-		text-decoration: none;
-	}
-
-	nav a:hover {
-		color: #ffffff;
-	}
-
-	nav a.active {
-		color: #ffffff;
-	}
-
-	nav a.active::after {
-		content: '';
-		position: absolute;
-		bottom: -4px;
-		left: 0;
-		width: 100%;
-		height: 1px;
-		background-color: #c9a227;
-	}
-
-	.hamburger {
-		display: none;
-		flex-direction: column;
-		justify-content: space-between;
-		width: 24px;
-		height: 18px;
-		background: transparent;
-		border: none;
-		cursor: pointer;
-		padding: 0;
-		z-index: 1001;
-	}
-
-	.hamburger span {
+	.logo img {
 		display: block;
-		width: 100%;
-		height: 2px;
-		background-color: #d4d4d4;
-		transition: all 0.3s ease;
+		width: 40px;
+		height: 40px;
 	}
 
-	.hamburger.active span:nth-child(1) {
-		transform: rotate(45deg) translate(5px, 5px);
-	}
-
-	.hamburger.active span:nth-child(2) {
-		opacity: 0;
-	}
-
-	.hamburger.active span:nth-child(3) {
-		transform: rotate(-45deg) translate(5px, -5px);
+	.label {
+		font-family: 'Inter', sans-serif;
+		font-size: 0.7rem;
+		font-weight: 400;
+		letter-spacing: 0.25em;
+		color: #777777;
+		text-transform: uppercase;
 	}
 
 	@media (max-width: 768px) {
 		header {
-			padding: 1rem 1.5rem;
-			position: sticky;
-			top: 0;
-			z-index: 1002;
+			padding: 1.5rem;
 		}
 
-		.hamburger {
-			display: flex;
+		.logo img {
+			width: 32px;
+			height: 32px;
 		}
 
-		nav {
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			width: 100%;
-			height: 100vh;
-			background-color: #000000;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			gap: 2rem;
-			opacity: 0;
-			visibility: hidden;
-			transition: all 0.3s ease;
-			z-index: 1000;
-		}
-
-		nav.active {
-			opacity: 1;
-			visibility: visible;
-		}
-
-		nav a {
-			font-size: 1.5rem;
-			color: #666666;
-		}
-
-		nav a.active {
-			color: #c9a227;
-		}
-
-		nav a.active::after {
-			display: none;
+		.label {
+			font-size: 0.65rem;
 		}
 	}
 </style>

@@ -1,146 +1,97 @@
 ---
-const currentYear = new Date().getFullYear();
 ---
 
 <footer>
 	<div class="footer-container">
-		<div class="footer-top">
-			<div class="footer-brand">
-				<a href="/" class="logo">Sáamaka Soul Trust</a>
-				<p class="tagline">From roots to remembrance</p>
-			</div>
-
-			<div class="footer-column">
-				<h4>Navigatie</h4>
-				<a href="/">Home</a>
-				<a href="/about">Over mij</a>
-				<a href="/coaching">Coaching</a>
-				<a href="/shop">Shop</a>
-				<a href="/projects">Projecten</a>
-			</div>
-
-			<div class="footer-column">
-				<h4>Services</h4>
-				<a href="/coaching">Life coaching</a>
-				<a href="/shop">Spiritual t-shirts</a>
-				<a href="/projects">Projecten</a>
-				<a href="/booking">Boek een sessie</a>
-			</div>
-
-			<div class="footer-column">
-				<h4>Contact</h4>
-				<a href="/booking">Boek een sessie</a>
-				<p class="email">info@saamakasoul.com</p>
-			</div>
+		<div class="footer-logo">
+			<img src="/logo.svg" alt="Sáamaka Soul" width="60" height="60" />
 		</div>
-
-		<div class="footer-bottom">
-			<p>&copy; {currentYear} Sáamaka Soul Trust. Alle rechten voorbehouden.</p>
-		</div>
+		<h2 class="footer-name">Sáamaka Soul</h2>
+		<p class="footer-subtitle">Private Identity & Leadership Advisory</p>
+		<a href="mailto:info@saamakasoul.com" class="footer-email">
+			<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13L2 4"/></svg>
+			info@saamakasoul.com
+		</a>
+		<div class="footer-divider"></div>
 	</div>
 </footer>
 
 <style>
 	footer {
 		background-color: #000000;
-		padding: 4rem;
+		padding: 5rem 4rem 3rem;
 		border-top: 1px solid #1a1a1a;
 	}
 
 	.footer-container {
 		max-width: 1100px;
 		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 1rem;
 	}
 
-	.footer-top {
-		display: grid;
-		grid-template-columns: 2fr 1fr 1fr 1fr;
-		gap: 3rem;
-		margin-bottom: 3rem;
-		align-items: start;
+	.footer-logo img {
+		display: block;
+		width: 60px;
+		height: 60px;
+		margin-bottom: 0.5rem;
 	}
 
-	.footer-brand .logo {
+	.footer-name {
 		font-family: 'Cormorant Garamond', serif;
 		font-size: 1.5rem;
+		font-weight: 400;
 		font-style: italic;
 		color: #ffffff;
-		display: block;
-		margin-bottom: 0.5rem;
-		text-decoration: none;
 	}
 
-	.footer-brand .tagline {
-		font-family: 'Cormorant Garamond', serif;
-		font-size: 1rem;
-		font-style: italic;
-		color: #c9a227;
-	}
-
-	.footer-column h4 {
+	.footer-subtitle {
 		font-family: 'Inter', sans-serif;
-		font-size: 0.85rem;
-		font-weight: 500;
-		color: #c9a227 !important;
-		text-transform: uppercase;
+		font-size: 0.75rem;
+		font-weight: 300;
+		color: #777777;
 		letter-spacing: 0.1em;
-		margin-bottom: 1.25rem;
+		text-transform: uppercase;
 	}
 
-	.footer-column a {
-		font-family: 'Inter', sans-serif;
-		font-size: 0.9rem;
-		font-weight: 300;
-		color: #ffffff !important;
-		display: block;
-		margin-bottom: 0.75rem;
-		transition: color 0.3s ease;
-		text-decoration: none;
-	}
-
-	.footer-column a:hover {
-		color: #c9a227 !important;
-	}
-
-	.footer-column .email {
-		font-family: 'Inter', sans-serif;
-		font-size: 0.9rem;
-		font-weight: 300;
-		color: #ffffff !important;
-		display: block;
-		margin-bottom: 0.75rem;
-	}
-
-	.footer-bottom {
-		padding-top: 2rem;
-		border-top: 1px solid #1a1a1a;
-		text-align: center;
-	}
-
-	.footer-bottom p {
+	.footer-email {
 		font-family: 'Inter', sans-serif;
 		font-size: 0.8rem;
-		color: #666666;
+		font-weight: 300;
+		color: #777777;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		transition: color 0.3s ease;
+		margin-top: 0.5rem;
+	}
+
+	.footer-email:hover {
+		color: #ffffff;
+	}
+
+	.footer-divider {
+		width: 60px;
+		height: 1px;
+		background-color: #333333;
+		margin-top: 2rem;
 	}
 
 	@media (max-width: 768px) {
 		footer {
-			padding: 2rem 1.5rem;
+			padding: 3rem 1.5rem 2rem;
 		}
 
-		.footer-top {
-			grid-template-columns: 1fr 1fr;
-			gap: 2rem;
+		.footer-logo img {
+			width: 48px;
+			height: 48px;
 		}
 
-		.footer-brand {
-			grid-column: span 2;
-			text-align: center;
-			margin-bottom: 1rem;
-		}
-
-		.footer-column {
-			text-align: center;
+		.footer-name {
+			font-size: 1.3rem;
 		}
 	}
 </style>
