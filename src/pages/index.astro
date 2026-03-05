@@ -87,6 +87,31 @@ import Header from '../components/Header.astro';
 			<div class="immersion-watermark">PRIVATE ADVISORY</div>
 		</section>
 
+		<!-- ABOUT SECTION -->
+		<section class="about">
+			<div class="about-container">
+				<span class="about-label">THE PATH IS THE CREDENTIAL</span>
+				<blockquote class="about-quote">
+					"They say the hardest battles are given to the strongest soldiers. I lived that truth."
+				</blockquote>
+				<div class="about-body">
+					<p>For years, I walked the path of the "Black Sheep"; raising myself, navigating isolation, and fighting battles with no one to turn to. Paradoxically, while I struggled to find support for myself, I was always the anchor for everyone else.</p>
+					<p>In the silence of that isolation, I wrestled with four questions:</p>
+					<ul class="about-questions">
+						<li>Why do I have to suffer?</li>
+						<li>Why, despite everything, do I still have so much love to give?</li>
+						<li>Why do I long for love, yet find it absent?</li>
+						<li>Why must I fight so hard just to survive?</li>
+					</ul>
+					<p>I found the answers not in textbooks, but through the guidance of my ancestors; the Sáamaka Maroons of Suriname who fought for freedom and preserved their identity against all odds.</p>
+					<p>Their wisdom taught me what no institution could: how to breathe through pain, how to journal my way to clarity, how to unlearn survival patterns and relearn thriving ones.</p>
+					<p>I realized that my history was not a tragedy to overcome, but a curriculum to master. What I lived through does not make me a victim, it makes me a guide for those still on the journey. I have walked the path myself, and now I hold the lantern for leaders ready to find their own way.</p>
+				</div>
+				<span class="about-sacred">This is not coaching. This is sacred work, born from sacred wounds.</span>
+				<p class="about-closing"><strong>You have built this level. Now let us build the identity that will hold the next one.</strong></p>
+			</div>
+		</section>
+
 		<!-- SÁAMAKA SOUL VISION SECTION -->
 		<section class="vision">
 			<div class="vision-container">
@@ -307,6 +332,101 @@ import Header from '../components/Header.astro';
 		margin-bottom: 1.25rem;
 	}
 
+	/* ========== ABOUT SECTION ========== */
+	.about {
+		padding: 6rem 4rem;
+		border-top: 1px solid #1a1a1a;
+	}
+
+	.about-container {
+		max-width: 700px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.about-label {
+		font-family: 'Inter', sans-serif;
+		font-size: 0.7rem;
+		font-weight: 500;
+		letter-spacing: 0.2em;
+		color: #c9a227;
+		text-transform: uppercase;
+		display: block;
+		margin-bottom: 2.5rem;
+	}
+
+	.about-quote {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 1.6rem;
+		font-weight: 400;
+		font-style: italic;
+		color: #ffffff;
+		line-height: 1.5;
+		margin: 0 0 3rem;
+		padding: 0;
+		border: none;
+	}
+
+	.about-body p {
+		font-family: 'Inter', sans-serif;
+		font-size: 0.95rem;
+		font-weight: 300;
+		color: #cccccc;
+		line-height: 1.8;
+		margin-bottom: 1.25rem;
+		text-align: left;
+	}
+
+	.about-questions {
+		list-style: none;
+		padding: 0;
+		margin: 1.5rem 0 1.5rem 0;
+		text-align: left;
+	}
+
+	.about-questions li {
+		font-family: 'Inter', sans-serif;
+		font-size: 0.9rem;
+		font-weight: 300;
+		color: #cccccc;
+		line-height: 1.7;
+		padding-left: 1.25rem;
+		position: relative;
+		margin-bottom: 0.75rem;
+	}
+
+	.about-questions li::before {
+		content: '\00B7';
+		position: absolute;
+		left: 0;
+		font-size: 1.5rem;
+		line-height: 1.2;
+		color: #c9a227;
+	}
+
+	.about-sacred {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 1.3rem;
+		font-weight: 400;
+		font-style: italic;
+		color: #c9a227;
+		display: block;
+		margin-top: 2.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.about-closing {
+		font-family: 'Inter', sans-serif;
+		font-size: 0.95rem;
+		font-weight: 300;
+		color: #ffffff;
+		line-height: 1.8;
+	}
+
+	.about-closing strong {
+		font-weight: 500;
+	}
+
 	/* ========== VISION SECTION ========== */
 	.vision {
 		padding: 6rem 4rem;
@@ -435,6 +555,14 @@ import Header from '../components/Header.astro';
 
 		.immersion-text h2 {
 			font-size: 1.5rem;
+		}
+
+		.about {
+			padding: 3rem 1.5rem;
+		}
+
+		.about-quote {
+			font-size: 1.3rem;
 		}
 
 		.vision {
